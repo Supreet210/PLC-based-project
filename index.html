@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Page</title>
+  <style>
+    body{
+    background-color: white;
+    margin: 0;
+    padding-top: 70px;
+    font-family: Arial, sans-serif;
+    }
+
+    header {
+    position: fixed;
+    height: 70px;
+    background-color: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    margin-bottom: 15px;
+    width: 98%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    }
+
+    .tit {
+    flex: 1;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    }
+
+    .profile-container {
+    position: relative;
+    }
+
+    .sup-btn {
+        border: none;
+        background-color: white;
+        padding: 8px 16px;
+        border-radius: 16px;
+        font-size: 14px;
+        box-shadow: 5px 5px 15px rgba(30, 20, 20, 0.1);
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        color: #374151;
+    }
+
+    .sup-btn:hover {
+    background-color: rgb(4, 20, 62);
+    color: white;
+    }
+
+    .profile-box {
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background-color: #f3f4f6;
+    padding: 16px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: #111827;
+    z-index: 10;
+    }
+    .profile-box a{
+        text-decoration: none;
+        color: #111827;
+    }
+    .profile-box button{
+    border: none;
+    background-color: white;
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-size: 14px;
+    box-shadow: 5px 5px 15px rgba(30, 20, 20, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    color: #374151;
+    }
+    .profile-box button:hover {
+    background-color: rgb(4, 20, 62);
+    }
+    .profile-box a:hover{
+        color: white;
+    }
+
+    /* Product Card */
+    .product-card {
+    background-color: white;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+    width: 900px;
+    margin: 10px auto 30px;
+    border-radius: 10px;
+    border: 1px solid #a0c6d8;
+    }
+
+    .product-card:hover {
+    box-shadow: 0 3px 8px #a0c6d8;
+    }
+
+    .image-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    }
+
+    .product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    }
+
+    .product-info {
+    padding: 10px;
+    text-align: center;
+    background-color: #a0c6d8;
+    border-radius: 0 0 10px 10px;
+    font-size: 12px;
+    }
+
+    .product-price {
+    color: #374151;
+    font-size: 15px;
+    font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2 class="tit">PLC Based Smart Motor Control With Fault Handling</h2>
+    <div class="profile-container">
+      <button class="sup-btn" onclick="toggleProfile()">Supreet B</button>
+      <div class="profile-box" id="profileBox">
+        <h3>Supreet B</h3>
+        <p>Email: supreet212007@gmail.com</p>
+        <p>Role: Mechatronics Student</p>
+        <p>Specialization: PLC Programming, Fault Detection Systems</p>
+        <button><a href="https://www.linkedin.com/in/supreet-b-87832b328">Linkedin</a></button>
+
+      </div>
+    </div>
+  </header>
+
+
+  <div class="product-card">
+    <div class="image-container">
+      <img src="WhatsApp Image 2025-07-17 at 11.28.25_eaef529c.jpg" alt="PLC Project 1" class="product-image" />
+    </div>
+    <div class="product-info">
+      <p class="product-price">Structured Text PLC programming in CODESYS: Implementing fault detection and motor control logic using timers, sensors, and status feedback for robust automation.</p>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="image-container">
+      <img src="2.jpg" alt="PLC Project 2" class="product-image" />
+    </div>
+    <div class="product-info">
+      <p class="product-price">Boolean-based PLC logic in Structured Text: Monitoring IR sensor and button states to manage motor activation, fault timer behavior, and real-time system status feedback.</p>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="image-container">
+      <img src="3.jpg" alt="PLC Project 3" class="product-image" />
+    </div>
+    <div class="product-info">
+      <p class="product-price">Designing a resilient PLC routine in Structured Text: Responding to Start/Stop commands and IR sensor input to control motor behavior, trigger timed fault conditions, and dynamically update system status and fault buzzer feedback.</p>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="image-container">
+      <img src="4.jpg" alt="PLC Project 4" class="product-image" />
+    </div>
+    <div class="product-info">
+      <p class="product-price">Custom CODESYS HMI interface showcasing dynamic elements: Start/Stop controls, IR sensor state toggle, and visual motor status indicators.</p>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="image-container">
+      <img src="5.jpg" alt="PLC Project 5" class="product-image" />
+    </div>
+    <div class="product-info">
+      <p class="product-price">CODESYS Device Configuration - Application Deployment & Runtime Monitoring.</p>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="image-container">
+      <img src="6.jpg" alt="PLC Project 6" class="product-image" />
+    </div>
+    <div class="product-info">
+      <p class="product-price">Interactive HMI Panel – System Control & Status Feedback.</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleProfile() {
+      const profile = document.getElementById("profileBox");
+      profile.style.display = profile.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>
